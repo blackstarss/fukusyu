@@ -1,0 +1,23 @@
+<body>
+    <h1>Editing Book</h1>
+
+<%= form_with model:@book do |f| %>
+  <div class="field">
+  <%= f.label :title, "本のタイトル" %>
+  <%= f.text_field :title %>
+</div>
+
+<div class="field">
+　<%= f.label :body, "感想" %>
+  <%= f.text_area :body %>
+</div>
+
+<%= f.submit 'Create Book' %>
+<% end %>
+
+<%= link_to book_path do %>Show<% end %> |
+<a class="back" href="/books">Back</a>
+
+
+
+</body>
